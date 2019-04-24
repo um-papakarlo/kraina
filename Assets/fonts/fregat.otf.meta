@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b3997bff02446b343856c31fe479d2c4
+timeCreated: 1521400725
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Fregat
+  fontNames:
+  - Fregat
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

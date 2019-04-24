@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scenario version="1.0" start_location="welcome0" map="default/map" kraina_version="1.0">
+  <!-- Координати основних точок на карті гри:
+    -  5:50 В'їзд
+	- 10:20 Амбар
+	- 23:55 Майтерня, хлів та гараж з трактором
+	- 25:80 Мельниця
+  -->
+  <!-- STORY -->
+  <item name="welcome0" type="story" href="welcome1">
+    <text size="20" color="#FFFFFF">Далеко в неосяжному космосі відбулась фінальна битва чотирьох з наймогутніших цивілізацій, яка завершилась могутнім вибухом, який поставив кінець баталіям. Безліч космічних кораблів перетворились на металобрухт...</text>
+    <image>default/story/musor</image>
+  </item>
+  <item name="welcome1" type="story" href="welcome2">
+    <text size="20" color="#FFFFFF">Серед розломків не було видно ніякого руху. Лише один невеликий сервісний корабль зміг запустити двигуни і почав поспішно покидати арену бою. Зв'язку з Центром не було, тому було прийнято рішення летіти в найближчу безпечну планету.</text>
+    <image>default/story/musor</image>
+  </item>
+  <item name="welcome2" type="story" href="welcome3">
+    <text size="22" color="#FFFFFF">Через нестачу пального космічний корабль був вимушений здійснити екстренну посадку на найближчій населеній планеті. Його вхід в атмосферу планети виявився доволі важким...</text>
+    <image>default/story/falling_stones</image>
+  </item>
+  <item name="welcome3">
+    <text>Космічний корабль здійснив останню в своїй історії посадку на планету. На планеті були, хоч і доволі скромні, рослинні та тваринні світи. Невдовзі задній люк корабля безцеремонно відвалився і звідти виїхав єдиний виживший пасажир зоряного судна: бойовий робот GMB-CS200. Невдовзі судно вибухнуло.</text>
+	<image>default/quest_img/sky-space44</image>
+	<coord>5:50</coord>
+    <link href="welcome4">Далі</link>
+  </item>
+  <item name="welcome4">
+    <text>Робот просканував місцевість на наявність розвинутих технологій. Великих міст в радіусі 500 км виявлено не було. Найбільш розвинуті технології було виявлено поблизу невеликого села. Робот подався туди, адже заряд його батарей був невеликим.</text>
+	<image>default/quest_img/robot</image>
+	<coord>5:50</coord>
+    <link href="vjizd">Далі</link>
+  </item>
+  <!-- /STORY -->
+  <!-- L1_NAV -->
+  <item name="vjizd">
+    <text>Робот проник на відкриту міцевість. Перед ним виднілась ферма. На в'їзді на ферму виднівся банер "Вітаємо вас в країні Фізика!". Також було видно майстерню, амбар, млин, гараж з трактором та хлів. Куди відправиться робот?</text>
+	<image>default/quest_img/welcome</image>
+	<coord>5:50</coord>
+    <link href="ambar">Піти в амбар</link>
+    <link href="hliv">Піти до хліву</link>
+    <link href="melnitsa">Піти до водного млину</link>
+  </item>
+  <item name="ambar">
+    <text>Робот виїхав на пагірок з амбаром. Біля дерев'яної будівлі було рокидано сіно. Поряд стояла височезна антена.</text>
+	<image>default/quest_img/ambar</image>
+	<coord>10:20</coord>
+    <link href="antenna">Підійти да антени</link>
+    <link href="vjizd">Вернутись до дороги</link>
+  </item>
+  <item name="melnitsa">
+    <text>Робот з'їхав вниз до озера, де знаходилась водний млин. Саме там в озеро, проходячи через колесо, впадала невеличка річка. Робот помітив, що млин працює, як електростанція. Від неї тоді точно можливо було б зарядити свої батареї...</text>
+	<image>default/quest_img/melnitsa</image>
+	<coord>15:80</coord>
+    <link href="el_box_story">Підійти до розподільчого електроящика</link>
+    <link href="vjizd">Вернутись до дороги</link>
+  </item>
+  <item name="hliv">
+    <text>Робот знаходиться біля хліву. Біля хліву знаходяться майстерня, гараж з трактором. Поряд знаходилась свиня...</text>
+	<image>default/quest_img/hliv</image>
+	<coord>23:55</coord>
+    <link href="majstern">Піти в майстеню</link>
+    <link href="garage">Піти до гаража</link>
+    <link href="swin">Підійти до свині</link>
+    <link href="vjizd">Вернутись до дороги</link>
+  </item>
+  <item name="majstern">
+    <text>На столі знаходився доволі цікавий генератор, за допомогою якого напевно можна зарадити батареї робота...</text>
+	<image>default/quest_img/majstern</image>
+	<coord>23:55</coord>
+    <link href="stirling">Підійти до двигуна</link>
+    <link href="hliv">Вернутись надвір</link>
+  </item>
+  <item name="garage">
+    <text>Гараж виявився закритим. Напевно буде варто спробувати в інших раз...</text>
+	<image>default/quest_img/hliv</image>
+	<coord>23:55</coord>
+	<link href="wless">Спробувати ввести код</link>
+    <link href="hliv">Вернутись надвір</link>
+  </item>
+  <!-- /L1_NAV -->
+  <!-- MINIGAME -->
+  <item name="swin">
+    <text>Свиня побачила робота. Вона сказала йому, що Фізика, повилетиля країни, немає вдома. Він уїхав, і коли повернеться невідомо.</text>
+	<image>default/quest_img/hliv2</image>
+	<coord>23:55</coord>
+    <link href="swin2">А хто такий Фізик?</link>
+  </item>
+  <item name="swin2">
+    <text>Свиня відказала: "Фізик" - це електрик, якому належить ферма. Ферму він називає своєю країною. Крім того, що він доморощений вчений, він має безліч винаходів.</text>
+	<image>default/quest_img/master</image>
+	<coord>23:55</coord>
+    <link href="hliv">Далі</link>
+  </item>
+  <item name="antenna" type="story" href="ambar">
+    <text size="20" color="#FFFFFF">На фоні лісу гордо стирчала висока антена. Робот просканував її, і виявив, що вона нічого не передавала. Напевно десь був передавач, і його належало в свій час увімкнути...</text>
+    <image>default/story/antenna</image>
+  </item>
+  <item name="el_box_story" type="story" href="el_box">
+    <text size="20" color="#FFFFFF">Біля будівлі млину знаходився розподільчий електробокс. Напевно, він розподіляв енергію по фермі, що дозволяло їй працювати незалежно від суперстабільних мереж Київобленерго. Відкривши бокс, робот зрозумів, що там чогось не вистачало...</text>
+    <image>default/models/electrobox/bsa</image>
+  </item>
+  <item name="el_box" type="model">
+    <model name="electrobox" href="success">default/models/electrobox.xml</model>
+  </item>
+  <item name="stirling" type="model">
+    <model name="stirling" href="hliv">default/models/stirling.xml</model>
+  </item>
+  <item name="wless" type="model">
+    <model name="wless" href="item0">default/models/wless.xml</model>
+  </item>
+  <!-- /MINIGAME -->
+  <item name="success">
+    <text>Виконанавши завдання, робот вернувся на в'їзд на ферму...</text>
+	<image>default/quest_img/welcome</image>
+	<coord>50:50</coord>
+    <link href="vjizd">Далі</link>
+  </item>
+  <item name="fail">
+    <text>Ви завалили тест. Гра завершилась невдало</text>
+	<image>default/quest_img/phantom</image>
+    <link href="reset_fail">Вернутись в головне меню</link>
+  </item>
+</scenario>
